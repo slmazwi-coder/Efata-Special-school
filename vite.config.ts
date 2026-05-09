@@ -1,11 +1,8 @@
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-import { resolve } from "path";
+/// <reference types="vite/client" />
 
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: { "@": resolve(__dirname, "./src") },
-  },
-});
+declare module "*.png" { const src: string; export default src; }
+declare module "*.jpg" { const src: string; export default src; }
+declare module "*.jpeg" { const src: string; export default src; }
+declare module "*.webp" { const src: string; export default src; }
+declare module "*.svg" { const src: string; export default src; }
+declare module "*.gif" { const src: string; export default src; }
